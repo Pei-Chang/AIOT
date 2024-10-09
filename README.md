@@ -1,6 +1,6 @@
 # Linear Regression Problem Solving Steps With Streamlit
 
-## 1. Write Python to Solve Linear Regression Problem
+## 1. Prompt: Write Python to Solve Linear Regression Problem
 
 ```python
 import numpy as np
@@ -27,7 +27,7 @@ print(f"Mean Squared Error: {mse}")
 print(f"R² Score: {r2}")
 ```
 
-## 2. Linear Regression with True and Predicted Regression Lines
+## 2. Prompt: Linear Regression with True and Predicted Regression Lines
 
 ```python
 import numpy as np
@@ -57,7 +57,7 @@ plt.title('Linear Regression: True vs Predicted Line')
 plt.show()
 ```
 
-## 3. CRISP-DM Process for Solving a Linear Regression Problem
+## 3. Prompt: Follow CRISP-DM Process and rewrite above code.
 
 ### 1. Business Understanding
 - **Objective**: Build a linear regression model to predict values of `y` based on an independent variable `X`. We will compare the predicted regression line with the true regression line.
@@ -125,8 +125,7 @@ plt.title('Linear Regression: True vs Predicted Line')
 plt.show()
 ```
 
-## 4. Combine All Figures in One, Show Regression Line in Red
-### Modify the code to set y=a\*X+50+c\*np.random.randn(n,1),where a is -10 to 10, c is 0 to 100, n is number of points 10 to 500, allow user to input a, c, n as slider.  convert this code to streamlit(don't use matplotlib)
+## 4. Prompt: Combine All Figures in One, Show Regression Line in Red. Modify the code to set y=a\*X+50+c\*np.random.randn(n,1),where a is -10 to 10, c is 0 to 100, n is number of points 10 to 500, allow user to input a, c, n as slider.  convert this code to streamlit(don't use matplotlib)
 
 ```python
 import streamlit as st
