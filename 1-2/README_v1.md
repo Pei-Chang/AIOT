@@ -5,7 +5,8 @@
 #### Step 3: Build Model using Lasso
 #### Step 4: Evaluation: MSE, MAE, R2 metrics 的意義, overfit and underfit 的判斷（畫出 training, test curve）, 優化模型 optuna
 #### Step 5: Deployment
-
+======================================================================
+# 利用 CRISP-DM 模板解決波士頓房價預測的多元回歸問題
 ## 1. 商業理解 (Business Understanding)
 - **目標**: 預測波士頓地區的房價中位數 (`medv`)。
 - **問題定義**: 確定影響房價的主要因素，並開發一個準確的預測模型。
