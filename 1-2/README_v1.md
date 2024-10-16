@@ -1,4 +1,10 @@
 # 利用 CRISP-DM 模板解決波士頓房價預測的多元回歸問題
+#### Prompt: 
+#### Step 1: 爬蟲抓取Boston房價
+#### Step 2: Preprocessing : train test split
+#### Step 3: Build Model using Lasso
+#### Step 4: Evaluation: MSE, MAE, R2 metrics 的意義, overfit and underfit 的判斷（畫出 training, test curve）, 優化模型 optuna
+#### Step 5: Deployment
 
 ## 1. 商業理解 (Business Understanding)
 - **目標**: 預測波士頓地區的房價中位數 (`medv`)。
