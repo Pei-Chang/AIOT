@@ -8,7 +8,7 @@ from sklearn.svm import LinearSVC
 st.title("3D Scatter Plot with Adjustable Distance Threshold")
 st.write("This app generates random points, classifies them based on distance from the origin, and visualizes the separating hyperplane.")
 
-# Step 1: Generate random points centered at (0, 0) with variance 10
+# Generate random points centered at (0, 0) with variance 10
 np.random.seed(0)
 num_points = 600
 mean = 0
@@ -22,16 +22,16 @@ threshold_distance = st.slider("Adjust Distance Threshold", min_value=1.0, max_v
 # Calculate distances from the origin
 distances = np.sqrt(x1**2 + x2**2)
 
-# Step 2: Assign labels based on the adjustable threshold
+# Assign labels based on the adjustable threshold
 Y = np.where(distances < threshold_distance, 0, 1)
 
-# Step 3: Calculate x3 as a Gaussian function of x1 and x2
+# Calculate x3 as a Gaussian function of x1 and x2
 def gaussian_function(x1, x2):
     return np.exp(-0.1 * (x1**2 + x2**2))
 
 x3 = gaussian_function(x1, x2)
 
-# Step 4: Train a LinearSVC to find a separating hyperplane
+# Train a LinearSVC to find a separating hyperplane
 X = np.column_stack((x1, x2, x3))
 clf = LinearSVC(random_state=0, max_iter=10000)
 clf.fit(X, Y)
