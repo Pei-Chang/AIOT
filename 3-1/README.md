@@ -2,7 +2,7 @@
 ### Prompt: 
 ### 產生0~1000的亂數300個 
 ### y=1時x介於500~800，其餘的y=0
-### 做logistic regression 輸出預測結果(y1)和SVM輸出預測結果(y2)
+### 做logistic regression 輸出預測結果(y1)和SVM輸出預測結果(y2) 並follow CRISP-DM
 ### 在兩個結果加上dicision boundary 畫出 y1 y2
 
 ## Output:
