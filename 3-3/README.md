@@ -8,6 +8,7 @@
 ### Define Gaussian Function: Create a Gaussian function to determine the height (z-coordinate) of each point in the scatter plot.
 ### Visualize Data: Use Plotly to create a 3D scatter plot and display the hyperplane that separates the two classes.
 
-## Output
-![image](https://github.com/user-attachments/assets/8727c1d5-5d92-4ed0-9c78-26d35727d369)
+## Output (影片於SVM_OVAL.MP4)
+![image](https://github.com/user-attachments/assets/f9f993ed-1521-4c83-884b-76240f9e5aa9)
+
 
