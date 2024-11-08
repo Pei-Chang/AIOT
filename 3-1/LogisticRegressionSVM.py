@@ -1,3 +1,5 @@
+
+
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.linear_model import LogisticRegression
@@ -19,7 +21,7 @@ logistic_model.fit(x_train, y_train)
 y_pred_logistic = logistic_model.predict(x_test)
 
 # SVM
-svm_model = SVC(kernel='linear')
+svm_model = SVC( probability=True)
 svm_model.fit(x_train, y_train)
 y_pred_svm = svm_model.predict(x_test)
 
@@ -30,23 +32,35 @@ accuracy_svm = accuracy_score(y_test, y_pred_svm)
 print(f"Logistic Regression Accuracy: {accuracy_logistic:.2f}")
 print(f"SVM Accuracy: {accuracy_svm:.2f}")
 
+# 準備畫 Decision Boundary
+x_values = np.linspace(0, 1000, 1000).reshape(-1, 1)  # 0到1000之間的連續數據
+y_boundary = svm_model.predict_proba(x_values)[:, 1]
+
+# Logistic Regression 的預測概率
+y_prob_logistic = logistic_model.predict_proba(x_values)[:, 1]
+
+# SVM 的預測概率
+y_prob_svm = svm_model.predict_proba(x_values)[:, 1]
+
 # 畫圖
 plt.figure(figsize=(12, 5))
 
-# Logistic Regression 的預測結果
+# Logistic Regression 的預測結果和 Decision Boundary
 plt.subplot(1, 2, 1)
-plt.scatter(x_test, y_test, color="blue", label="True")
-plt.scatter(x_test, y_pred_logistic, color="red", label="Predicted")
-plt.title("Logistic Regression")
+plt.scatter(x_test, y_test, color="gray", label="True")
+plt.scatter(x_test, y_pred_logistic, color="red",marker="x", label="Predicted")
+plt.plot(x_values, y_prob_logistic, color="black", linestyle="--", label="Decision Boundary")
+plt.title("Logistic Regression with Decision Boundary")
 plt.xlabel("x")
 plt.ylabel("y1 (predicted)")
 plt.legend()
 
-# SVM 的預測結果
+# SVM 的預測結果和 Decision Boundary
 plt.subplot(1, 2, 2)
-plt.scatter(x_test, y_test, color="blue", label="True")
-plt.scatter(x_test, y_pred_svm, color="green", label="Predicted")
-plt.title("SVM")
+plt.scatter(x_test, y_test, color="gray", label="True")
+plt.scatter(x_test, y_pred_svm, color="green",marker="x", label="Predicted")
+plt.plot(x_values, y_boundary, color="black", linestyle="--", label="Decision Boundary")
+plt.title("SVM with Decision Boundary")
 plt.xlabel("x")
 plt.ylabel("y2 (predicted)")
 plt.legend()
