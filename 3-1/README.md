@@ -7,5 +7,5 @@
 
 ## Output:
 ![image](https://github.com/user-attachments/assets/d16f636b-121e-4d30-802e-f6bf2145336b)
-## Logistic Regression Accuracy: 0.67
-## SVM Accuracy: 1.00
+### Logistic Regression Accuracy: 0.67
+### SVM Accuracy: 1.00
