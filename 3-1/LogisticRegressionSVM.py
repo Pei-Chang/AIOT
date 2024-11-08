@@ -1,5 +1,9 @@
+# CRISP-DM Steps Implementation for Logistic Regression and SVM (RBF Kernel)
 
+# Step 1: Business Understanding
+# Goal: Classify binary outcomes using logistic regression and SVM on 300 random variables to analyze classification performance and decision boundaries.
 
+# Step 2: Data Understanding
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.linear_model import LogisticRegression
@@ -7,6 +11,7 @@ from sklearn.svm import SVC
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 
+# Step 3: Data Preparation
 # 生成資料
 np.random.seed(0)
 x = np.random.randint(0, 1001, 300)
@@ -15,6 +20,7 @@ y = np.where((x >= 500) & (x <= 800), 1, 0)
 # 分割訓練集和測試集
 x_train, x_test, y_train, y_test = train_test_split(x.reshape(-1, 1), y, test_size=0.3, random_state=0)
 
+# Step 4: Modeling
 # Logistic Regression
 logistic_model = LogisticRegression()
 logistic_model.fit(x_train, y_train)
@@ -25,6 +31,7 @@ svm_model = SVC( probability=True)
 svm_model.fit(x_train, y_train)
 y_pred_svm = svm_model.predict(x_test)
 
+# Step 5: Evaluation
 # 計算準確率
 accuracy_logistic = accuracy_score(y_test, y_pred_logistic)
 accuracy_svm = accuracy_score(y_test, y_pred_svm)
@@ -42,6 +49,7 @@ y_prob_logistic = logistic_model.predict_proba(x_values)[:, 1]
 # SVM 的預測概率
 y_prob_svm = svm_model.predict_proba(x_values)[:, 1]
 
+# Step 6: Deployment (Visualization of Results)
 # 畫圖
 plt.figure(figsize=(12, 5))
 
