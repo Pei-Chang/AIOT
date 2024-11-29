@@ -3,6 +3,7 @@
 ## 使用 Optuna 進行特徵工程、模型選擇，並優化 PyCaret 模型的超參數 以下為執行結果: 分數為0.77990 比 Pycaret尚未超參數優化的分數 0.77033 還高
 ![image](https://github.com/user-attachments/assets/ec59f427-6237-43d4-bd07-8f6154df5a93)
 
+## 以下為程式執行碼結果
 PS D:\03\_School\VScode> & d:/03\_School/VScode/myenv/Scripts/python.exe d:/03\_School/VScode/AIOT/Pycarat/pycaret\_optuna.py 
 
 `                    `Description             Value
