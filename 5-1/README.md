@@ -1,5 +1,5 @@
 # HW5-1: iris classification problem (tf.keras, pytorch, pytorch lightning 要畫出tensorboard)
-Prompt: write sklearn to solve iris classification problem following crisp-dm steps with tensorboard
+Prompt: use 3 different ways including tf.keras, pytorch and pytorch lightening to solve iris classification problem with tensorboard
 
 程式碼 
 詳見AIOT_HW5-1_Keras.ipynb
